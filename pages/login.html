@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Heaven Motor Cycle Store</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+    <!-- Fuente Russo One de Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">
+    <!-- Token CSRF -->
+    <meta name="csrf-token" content="{{ csrf_token() }}">
+    <!-- Estilos personalizados -->
+    <link href="../css/styles.css" rel="stylesheet">
+    <style>
+        body, h1, h2, .form-label, .btn, p, input {
+            font-family: 'Russo One', sans-serif;
+        }
+        .card-title {
+            color: #424242;
+        }
+        .form-label {
+            color: #555;
+        }
+        .text-decoration-none {
+            color: #555;
+        }
+        .text-decoration-none:hover {
+            color: #1565C0;
+        }
+    </style>
+</head>
+<body class="bg-blue-500 flex items-center justify-center min-h-screen">
+    <div class="w-full max-w-md p-4 bg-blue-500">
+        <!-- Logo -->
+        <div class="flex justify-center mb-4">
+            <img alt="Motorcycle logo" class="w-24 h-24" src="../img/logo.jpg"/>
+        </div>
+        <!-- Título -->
+        <h1 class="text-center text-white text-xl mb-6">
+            Heaven Motor Cycle Store
+        </h1>
+        <!-- Formulario de inicio de sesión -->
+        <form id="loginForm" class="bg-white p-6 rounded-lg shadow-md">
+            <!-- Mensaje de error -->
+            <div id="error-msg" class="mb-4 text-red-500 text-sm d-none"></div>
+            <div class="mb-4">
+                <label for="email" class="form-label">Correo electrónico:</label>
+                <input type="email" class="w-full p-2 border border-gray-300 rounded" id="mail_usr" name="email" required>
+            </div>
+            <div class="mb-4">
+                <label for="password" class="form-label">Contraseña:</label>
+                <input type="password" class="w-full p-2 border border-gray-300 rounded" id="pass_usr" name="password" required>
+            </div>
+            <div class="flex justify-between">
+                <button type="submit" class="bg-black text-white py-2 px-4 rounded">Ingresar</button>
+                <a href="../index.html" class="bg-black text-white py-2 px-4 rounded">Cancelar</a>
+            </div>
+        </form>
+        <!-- Enlace de registro -->
+        <p class="text-center mt-6 text-white">
+            ¿No tienes cuenta? <a href="registro.html" class="text-decoration-none">Regístrate aquí</a>
+        </p>
+    </div>
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Script personalizado -->
+    <script src="../js/login.js"></script>
+</body>
+</html>

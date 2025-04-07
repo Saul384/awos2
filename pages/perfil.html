@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+    <title>Perfil de Usuario</title>
+</head>
+
+<body class="bg-gray-800 text-white">
+    <div class="max-w-md mx-auto bg-gray-900 rounded-lg overflow-hidden shadow-lg">
+        <!-- Header modificado con botón de volver -->
+        <div class="flex items-center justify-between p-4 bg-gray-800">
+            <a class="text-white text-xl font-bold hover:text-blue-300 transition-colors">perfil</a>
+            <div class="flex items-center space-x-4">
+                <a href="../index.html"
+                    class="bg-blue-600 hover:bg-blue-700 text-white px-3 py-1 rounded-md text-sm font-medium transition-colors">
+                    Volver al Inicio
+                </a>
+            </div>
+        </div>
+
+        <!-- Imagen de perfil -->
+        <img alt="A blue motorcycle with mountains in the background" class="w-full" height="400"
+            src="https://storage.googleapis.com/a1aa/image/uskJHnF38hucX9t02e09ZbkViFxng7PP1FLQv7iSztk.jpg"
+            width="600" />
+
+        <!-- Información de usuario -->
+        <div class="p-4 text-center">
+            <div class="bg-blue-500 text-white py-2 px-4 rounded-full mb-2">
+                Email: juan@gmail.com
+            </div>
+            <div class="bg-blue-500 text-white py-2 px-4 rounded-full">
+                Nombre: Juan de la Torre
+            </div>
+        </div>
+
+        <!-- Menú inferior -->
+        <div class="p-4 flex justify-around">
+            <div class="flex flex-col items-center">
+                <i class="fas fa-cog text-2xl mb-1"></i>
+                <span>Settings</span>
+            </div>
+            <div class="flex flex-col items-center">
+                <i class="fas fa-sign-out-alt text-2xl mb-1"></i>
+                <span id="logout" style="cursor: pointer;">Log out</span>
+            </div>
+            <div class="flex flex-col items-center">
+                <i class="fas fa-history text-2xl mb-1"></i>
+                <span>History</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="../js/logout.js"></script>
+</body>
+
+</html>

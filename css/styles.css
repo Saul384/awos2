@@ -1,0 +1,533 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+/* Fuente Russo One */
+.russo-one-regular {
+    font-family: "Russo One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+h1, h2, .nav-brand {
+    font-family: 'Russo One', sans-serif;
+}
+
+/* Barra de navegación */
+.navbar {
+    background-color: #0D47A1;
+    width: 100%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+
+.nav-brand {
+    font-size: 24px;
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+.nav-brand:hover {
+    background-color: #1565C0;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li {
+    margin-left: 15px;
+}
+
+.nav-links li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 15px;
+    background-color: transparent;
+    border-radius: 5px;
+}
+
+.nav-links li a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    transition: 0.3s;
+}
+
+.login-button {
+    background-color: #333;
+    padding: 10px 20px;
+    border-radius: 5px;
+    color: white;
+    text-decoration: none;
+    margin-left: 10px;
+}
+
+.login-button:hover {
+    background-color: #555;
+}
+
+/* Contenedor de productos */
+.productos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 20px;
+    justify-content: center;
+}
+
+/* Productos individuales */
+.producto {
+    padding: 20px;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.producto img {
+    width: 80%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    cursor: pointer;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #555;
+}
+
+/* Carrito de compras */
+#carrito {
+    margin-top: 20px;
+    padding: 20px;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+#carrito h2 {
+    margin-bottom: 20px;
+}
+
+#lista-carrito {
+    list-style: none;
+    padding: 0;
+}
+
+#lista-carrito li {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+#total-precio {
+    font-weight: bold;
+}
+
+/* Formulario de registro */
+#registroForm {
+    max-width: 400px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    text-align: center;
+}
+
+#registroForm input {
+    width: 90%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+#registroForm button {
+    width: 95%;
+    padding: 10px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#registroForm button:hover {
+    background-color: #555;
+}
+
+/* Menú desplegable */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    right: 0;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    border-radius: 5px;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Buscador */
+.search-container {
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 100%;
+    background-color: #f9f9f9;
+    padding: 10px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    border-radius: 5px;
+}
+
+.search-container input {
+    padding: 8px;
+    width: 200px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.search-container button {
+    padding: 8px;
+    background: #0D47A1;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    margin-top: 5px;
+    width: 100%;
+}
+
+.search-container button:hover {
+    background-color: #1565C0;
+}
+
+#search-results {
+    max-height: 300px;
+    overflow-y: auto;
+    margin-top: 0.5rem;
+}
+
+/* Clase para elementos ocultos */
+.hidden {
+    display: none !important;
+}
+
+/* Estilos para iconos en el menú */
+.fa {
+    margin-right: 0.5rem;
+    width: 1.25rem;
+    text-align: center;
+}
+
+/* Estilos para los botones de usuario en la barra de navegación */
+.user-buttons {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.user-buttons a, .user-buttons button {
+    color: white;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1.2rem;
+    padding: 5px;
+}
+
+.user-buttons a:hover, .user-buttons button:hover {
+    opacity: 0.8;
+}
+
+/* Estilos del Footer */
+footer {
+    background-color: #0D47A1; /* Azul oscuro para coincidir con la navbar */
+    color: white;
+    padding: 2rem 1rem;
+    text-align: center;
+    margin-top: 3rem;
+    font-family: Arial, sans-serif;
+}
+
+footer p {
+    margin: 0.5rem 0;
+    font-size: 0.9rem;
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: #cbd5e0; /* Azul claro al hacer hover */
+    text-decoration: underline;
+}
+
+.social-links {
+    margin: 1rem 0;
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.social-links a {
+    font-size: 1.2rem;
+    padding: 0.5rem;
+}
+
+.social-links a:hover {
+    transform: translateY(-2px);
+    text-decoration: none;
+}
+
+/* Estilos para los enlaces legales */
+footer p:last-child {
+    margin-top: 1.5rem;
+    font-size: 0.8rem;
+    color: #e2e8f0; /* Color más claro para texto legal */
+}
+
+footer p:last-child a {
+    margin: 0 0.5rem;
+    position: relative;
+}
+
+footer p:last-child a:not(:last-child)::after {
+    content: "|";
+    position: absolute;
+    right: -0.7rem;
+    color: #e2e8f0;
+}
+
+/* Estilos generales del carrito */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.cart-items {
+    transition: all 0.3s ease;
+}
+
+.cart-item {
+    transition: background-color 0.2s ease;
+}
+
+.cart-item:hover {
+    background-color: #f9f9f9;
+}
+
+/* Estilos para los botones de cantidad */
+.quantity {
+    -moz-appearance: textfield;
+    appearance: textfield;
+}
+
+.quantity::-webkit-outer-spin-button,
+.quantity::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.decrease-qty, .increase-qty {
+    transition: background-color 0.2s ease;
+}
+
+.decrease-qty:hover, .increase-qty:hover {
+    background-color: #e2e8f0;
+}
+
+/* Estilos para el botón de eliminar */
+.remove-item {
+    transition: color 0.2s ease;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+/* Estilos para el resumen del pedido */
+.order-summary {
+    position: sticky;
+    top: 20px;
+}
+
+.checkout-btn {
+    transition: all 0.3s ease;
+    font-weight: 600;
+}
+
+.checkout-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos para el carrito vacío */
+.empty-cart-message {
+    transition: all 0.3s ease;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .cart-header {
+        display: none;
+    }
+    
+    .cart-item {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+        padding: 1.5rem 0;
+    }
+    
+    .cart-item > div {
+        grid-column: span 12;
+        text-align: left !important;
+        justify-content: flex-start !important;
+    }
+    
+    .quantity-controls {
+        justify-content: flex-start !important;
+    }
+}
+/* Estilos generales */
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+h1, h2 {
+    color: #2c3e50;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+}
+
+/* Formulario */
+.checkout-section {
+    margin-bottom: 30px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input, select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+input:focus, select:focus {
+    border-color: #3498db;
+    outline: none;
+}
+
+.form-group-row {
+    display: flex;
+    gap: 15px;
+}
+
+.form-group-row > div {
+    flex: 1;
+}
+
+/* Tabla de resumen */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+tfoot tr:last-child {
+    font-weight: bold;
+    background-color: #f9f9f9;
+}
+
+/* Botón */
+.btn {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    font-size: 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #2980b9;
+}
+
+/* Responsivo */
+@media (max-width: 600px) {
+    .form-group-row {
+        flex-direction: column;
+        gap: 0;
+    }
+}

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrito de Compras - Motor Heaven Store</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+    <!-- Estilos personalizados -->
+    <link href="../css/carrito.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100">
+    <!-- Navbar -->
+    <nav class="bg-blue-900 p-4 flex items-center justify-between">
+        <a href="../index.html" class="text-white text-xl font-bold">Motor Heaven Store</a>
+        <div class="flex items-center space-x-4">
+            <a href="../index.html" class="text-white hover:text-blue-300">
+                <i class="fas fa-arrow-left mr-1"></i> Volver
+            </a>
+        </div>
+    </nav>
+
+    <!-- Contenido principal -->
+    <div class="container mx-auto p-4 max-w-4xl">
+        <h1 class="text-3xl font-bold text-center my-6">Tu Carrito de Compras</h1>
+        
+        <!-- Lista de productos -->
+        <div class="cart-items bg-white rounded-lg shadow-md p-6 mb-6">
+            <div class="empty-cart-message text-center py-10 hidden">
+                <i class="fas fa-shopping-cart text-5xl text-gray-300 mb-4"></i>
+                <h2 class="text-2xl font-semibold text-gray-600">Tu carrito está vacío</h2>
+                <p class="text-gray-500 mt-2">Agrega productos para continuar</p>
+                <a href="../index.html" class="mt-4 inline-block bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-md transition-colors">
+                    Ver productos
+                </a>
+            </div>
+
+            <div class="cart-content">
+                <div class="cart-header grid grid-cols-12 gap-4 border-b pb-2 mb-4 font-semibold">
+                    <div class="col-span-6">Producto</div>
+                    <div class="col-span-2 text-center">Precio</div>
+                    <div class="col-span-2 text-center">Cantidad</div>
+                    <div class="col-span-2 text-right">Total</div>
+                </div>
+
+                <div class="cart-body">
+                    <!-- Ejemplo de producto en el carrito -->
+                    <div class="cart-item grid grid-cols-12 gap-4 items-center py-4 border-b" data-id="1">
+                        <div class="col-span-6 flex items-center">
+                            <img src="../img/moto1.jpeg" alt="Moto 1" class="w-16 h-16 object-cover rounded mr-4">
+                            <div>
+                                <h3 class="font-medium">Moto 1</h3>
+                                <button class="remove-item text-red-500 text-sm mt-1 hover:text-red-700">
+                                    <i class="fas fa-trash mr-1"></i> Eliminar
+                                </button>
+                            </div>
+                        </div>
+                        <div class="col-span-2 text-center">$5,000</div>
+                        <div class="col-span-2 flex justify-center items-center">
+                            <button class="decrease-qty px-2 py-1 bg-gray-200 rounded-l">
+                                <i class="fas fa-minus"></i>
+                            </button>
+                            <input type="number" value="1" min="1" class="quantity w-12 text-center py-1 border-t border-b border-gray-300">
+                            <button class="increase-qty px-2 py-1 bg-gray-200 rounded-r">
+                                <i class="fas fa-plus"></i>
+                            </button>
+                        </div>
+                        <div class="col-span-2 text-right font-semibold">$5,000</div>
+                    </div>
+
+                    <!-- Segundo producto de ejemplo -->
+                    <div class="cart-item grid grid-cols-12 gap-4 items-center py-4 border-b" data-id="2">
+                        <div class="col-span-6 flex items-center">
+                            <img src="../img/moto2.jpeg" alt="Moto 2" class="w-16 h-16 object-cover rounded mr-4">
+                            <div>
+                                <h3 class="font-medium">Moto 2</h3>
+                                <button class="remove-item text-red-500 text-sm mt-1 hover:text-red-700">
+                                    <i class="fas fa-trash mr-1"></i> Eliminar
+                                </button>
+                            </div>
+                        </div>
+                        <div class="col-span-2 text-center">$7,000</div>
+                        <div class="col-span-2 flex justify-center items-center">
+                            <button class="decrease-qty px-2 py-1 bg-gray-200 rounded-l">
+                                <i class="fas fa-minus"></i>
+                            </button>
+                            <input type="number" value="1" min="1" class="quantity w-12 text-center py-1 border-t border-b border-gray-300">
+                            <button class="increase-qty px-2 py-1 bg-gray-200 rounded-r">
+                                <i class="fas fa-plus"></i>
+                            </button>
+                        </div>
+                        <div class="col-span-2 text-right font-semibold">$7,000</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Resumen del pedido -->
+        <div class="order-summary bg-white rounded-lg shadow-md p-6">
+            <h2 class="text-xl font-semibold mb-4">Resumen del Pedido</h2>
+            <div class="flex justify-between mb-2">
+                <span>Subtotal:</span>
+                <span class="subtotal">$12,000</span>
+            </div>
+            <div class="flex justify-between mb-2">
+                <span>Envío:</span>
+                <span class="shipping">$500</span>
+            </div>
+            <div class="flex justify-between mb-2">
+                <span>Descuento:</span>
+                <span class="discount">-$0</span>
+            </div>
+            <div class="flex justify-between font-bold text-lg mt-4 pt-4 border-t">
+                <span>Total:</span>
+                <span class="total">$12,500</span>
+            </div>
+            <button class="checkout-btn w-full mt-6 bg-green-600 hover:bg-green-700 text-white py-3 rounded-md transition-colors">
+                Proceder al Pago
+            </button>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="../js/carrito.js"></script>
+</body>
+</html>
